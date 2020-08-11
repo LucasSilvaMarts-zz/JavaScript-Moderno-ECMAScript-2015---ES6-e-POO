@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+        // let preserva o escopo em que foi criada a variável
+
+        // var pode ser usada dentro de escopo de função e de bloco
+
+        // 3 escopos: global, função e bloco    
+
+        var serie = 'Friends'
+
+        function x() {  
+            console.log(serie)
+
+        if(true) {
+        console.log(serie)
+    }
+}
+
+    x()
+
+    if(true) {
+    console.log(serie)  
+}
+
+    if(true) {
+        let serie = 'GOT'
+        console.log(serie)
+    }
+
+    // Os únicos escopos que sofrem elevação em relação ao var e let são os escopos de bloco
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+        // Funções parâmetros default
+        
+                                    // Parâmetros default
+        function contarUmaHistoria( personagem = 'Mark', atividade = 'correr', nome_dono = 'Lucas') {
+            document.write(`Era uma vez um cachorro chamado ${personagem}, ele gostava de ${atividade}, e o seu dono chamava ${nome_dono}.`);
+        } 
+
+        // Podemos passar novos parâmetros que vão substituir os parâmetros default
+        contarUmaHistoria( 'Tuti', 'cavar' )
+
+        function contarUmaHistoriaPt2( personagem = 'Lucas', objeto = 'carro', reacao = 'feliz') {
+            document.write(` No outro dia ${personagem} ganhou um ${objeto}, ele ficou muito ${reacao}`)
+        }
+
+        contarUmaHistoriaPt2()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

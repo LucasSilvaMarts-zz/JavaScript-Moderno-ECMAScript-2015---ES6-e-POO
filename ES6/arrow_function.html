@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+       // Arrow function
+
+       // Função convencional 
+
+      /* 
+       let quadrado = function (x = 5) {
+           return x * x  
+       }
+     */ 
+
+       // Arrow function
+     /*  
+       let quadrado = (x) => {
+           return x * x
+       }
+     */ 
+
+        // Podemos omitir os parenteses quando estamos passando apenas 1 parâmetro
+        /* 
+        Quando não vamos utilizar um bloco de código lógico, nós podemos 
+        descartar o uso da palavra "return" e o uso das chaves "{}"
+        */
+       
+       /*
+        let quadrado = x =>  x * x; // Return implícito  
+       
+        document.write(quadrado(4));
+       */ 
+       
+      /* 
+       let parOuImpar = function(numero) {
+
+        if( numero % 2 === 0 ) {
+            return 'par'
+        } else {
+            return 'ímpar'
+        }
+
+       }
+
+       document.write(parOuImpar(7))
+      */ 
+
+      // Arrow function
+
+     /* 
+      let parOuImpar = numero => {
+
+        if( numero % 2 === 0 ) {
+            return 'par'
+        } else {
+            return 'ímpar'
+        }
+      }
+     */ 
+      
+     let parOuImpar = numero =>  numero % 2 === 0 ? 'par' : 'ímpar' //return implícito
+     
+
+      document.write(parOuImpar(15))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

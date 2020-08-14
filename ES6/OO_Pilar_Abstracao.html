@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+        // OO - Pilar da Abstração
+
+        // Entidade
+        // Identidade
+        // Características
+        // Ações
+
+        // modelo da entidade/objeto
+        class ContaBancaria {
+            // agencia
+            // numeroConta
+            // saldo
+            // limite
+
+            // Construindo os atributos do objeto
+            constructor() {
+                this.agencia = 1075
+                this.numeroConta = 8351125
+                this.saldo = 50
+                this.limite = 450
+            }
+
+            depositar(valorDeposito) {
+                // Atualizando o valor do saldo
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque) {
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo() {
+                return this.saldo
+            }
+        }
+
+        //-----------------//--------------
+
+        // New indica que o modelo criado será transformado em um objeto
+        let x = new ContaBancaria()
+        let y = new ContaBancaria()
+
+        // Acessando os metodos
+
+        console.log(x.consultarSaldo())
+
+        // Adicionando valor
+
+        x.depositar(450)
+
+        console.log(x.consultarSaldo())
+        
+        x.sacar(20)
+
+        console.log(x.consultarSaldo())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

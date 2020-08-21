@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+       // Encapsulamento
+
+       // Seguro e reutilizável
+
+       class Tv {
+           constructor() {
+               this._relacaoCanais = Array(2, 4, 5, 7, 10)
+               this._canalAtivo = 5
+               this._volume = 5
+           }
+
+           // getters e setters
+
+           // Transforma o método em um método público
+           get canalAtivo() {
+               return this._canalAtivo  
+           }
+
+           set canalAtivo(canal) {
+
+                // Camada de segurança  
+                if(this._relacaoCanais.indexOf(canal)  !== -1) {
+                    this._canalAtivo = canal    
+                }
+               
+                
+           }
+       }
+
+       let tv = new Tv()
+
+       tv.canalAtivo = 7
+       console.log(tv.canalAtivo)
+
+
+       /*
+         O '_' no começo dos atributos indica ao programador 
+         para que ele não acesse o atributo diretamente e sim acesse usando
+         os métodos 'getters' e 'setters'.
+       */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // Sobreescrita de métodos no objeto filho  s
+
+        class Animal {
+            constructor() {
+                this.cor = ''
+                this.tamanho = null
+            }
+
+            dormir() {
+                console.log('Dormir')
+            }
+        }
+
+
+        class Passaro extends Animal {
+            constructor() {
+                super()
+                this.bico = "Curto";
+            }
+
+            voar() {
+                console.log('Voou')
+            }
+
+        }
+
+        class Papagaio extends Passaro {
+            constructor() {
+                super()
+                this.sabeFalar = true
+            }
+
+            falar() {
+                console.log('Eae')
+            }
+        }
+
+        class Avestruz extends Passaro {
+            constructor() {
+                super()
+
+            }
+
+            enterrarCabeca() {
+                console.log('Enterrar a cabeça')
+            }
+
+            voar() {
+                console.log('Não sabe voar')
+            }
+        } 
+
+        let avestruz = new Avestruz()
+        avestruz.enterrarCabeca()
+        avestruz.voar()
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

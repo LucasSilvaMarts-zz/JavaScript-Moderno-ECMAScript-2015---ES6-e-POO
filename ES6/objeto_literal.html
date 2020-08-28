@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // Objeto ES6
+        class Produto {
+            constructor(descricao, preco) {
+                this.descricao = descricao
+                this.preco = preco
+            }
+            verDescricao() {
+                document.getElementById('demo').innerHTML = (`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+        
+        let produto = new Produto('Notebook', 2200)
+        let produto2 = new Produto('Geladeira', 5500)
+        produto.verDescricao()
+        produto2.verDescricao()
+
+        //-----------------------------------------------------------
+
+        // Objeto literal - objeto descrito dentro do código
+
+        let produtoLiteral = {
+            descricao: 'Geladeira',
+            preco: 2200,
+            verDescricao: function() {
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+
+        produtoLiteral.verDescricao()
+
+    </script>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+</body>
+
+</html>

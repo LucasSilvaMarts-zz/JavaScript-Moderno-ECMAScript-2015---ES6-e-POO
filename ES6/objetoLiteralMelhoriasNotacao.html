@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // ES5
+
+        let nome = 'Lucas'
+        let idade = 19
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function() {
+                console.log(`${this.nome}, ${this.idade} anos, sexo ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+       console.log(objeto)
+       objeto.exibirResumo()
+
+       //-----------------------------------------------------------------------------
+
+       // ES6 
+
+       let objetoES6 = {
+            nome,
+            idade,
+            sexo,
+            profissao: profissao,
+            exibirResumo() {
+                console.log(`${this.nome}, ${this.idade} anos, sexo ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+        console.log(objetoES6)
+        objeto.exibirResumo()
+    </script>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+</body>
+
+</html>

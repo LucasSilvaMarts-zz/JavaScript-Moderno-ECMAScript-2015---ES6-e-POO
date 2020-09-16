@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+
+      let assinatura = {
+          idCliente: 1000,
+          descricao: 'Acesso a internet',
+          status() {
+              console.log('Ativo')
+          }
+      }
+        
+        console.log(assinatura.descricao)
+
+        /*
+            Por se tratar de um objeto único podemos chamar o objeto usando a sua referência 
+            ou passando a sua referência em uma outra variável e usar essa variável para
+            acessar o objeto.
+        */
+
+        let y = assinatura
+
+        //------------------------
+        console.log(y.descricao)
+
+        y.descricao = 'Intenet + tv + telefone'
+
+        console.log(assinatura.descricao)
+        console.log(y.descricao)
+
+    </script>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+</body>
+
+</html>

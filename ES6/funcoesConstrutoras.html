@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // A função construtora será construída e convertida em um objeto usando o operador "new"
+
+        let Carro = function() {
+            this.cor = 'Amarelo'
+            this.modelo = 'Chevette'
+            this.velocidadeAtual = 0
+            this.velocidadeMaxima = 180
+
+            this.acelerar = function() {
+                //this.velocidadeAtual += 10
+
+                let velocidade = this.getVelocidadeAtual() + 10
+                this.setVelocidadeAtual(velocidade)    
+            }
+
+            this.getVelocidadeAtual = function() {
+                return this.velocidadeAtual
+            }
+
+            this.setVelocidadeAtual = function(velocidadeAtual) {
+                this.velocidadeAtual = velocidadeAtual
+            }
+        }
+
+        // Aqui estamos construindo um objeto com base numa função
+
+        let carro = new Carro() 
+
+        console.log(`A velocidade atual é: ${carro.getVelocidadeAtual()}`)    
+        carro.acelerar()    
+        console.log(`A velocidade atual é: ${carro.getVelocidadeAtual()}`)
+      
+    </script>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+</body>
+
+</html>
